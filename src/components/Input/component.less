@@ -1,0 +1,23 @@
+@import (reference) '../../less/variables.less';
+
+input#input {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: block;
+	width: 100%;
+	padding: 1em 1.25em;
+	background-color: @white;
+	border: none;
+	outline: none;
+	font-size: 1.5em;
+	font-weight: 100;
+	box-shadow:  0 0 5px fade(@dark, 25%);
+	box-sizing: border-box;
+	z-index: 2;
+
+	&::placeholder {
+		color: @medium;
+	}
+}

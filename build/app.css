@@ -1,0 +1,145 @@
+input#input {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  width: 100%;
+  padding: 1em 1.25em;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  font-size: 1.5em;
+  font-weight: 100;
+  -webkit-box-shadow: 0 0 5px rgba(34, 34, 34, 0.25);
+          box-shadow: 0 0 5px rgba(34, 34, 34, 0.25);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 2;
+}
+input#input::-webkit-input-placeholder {
+  color: #aaa;
+}
+input#input:-ms-input-placeholder {
+  color: #aaa;
+}
+input#input::-ms-input-placeholder {
+  color: #aaa;
+}
+input#input::placeholder {
+  color: #aaa;
+}
+div#tree {
+  padding: 1.5em 2.25em;
+  padding-top: 6.5em;
+}
+div#tree h2 {
+  margin: 0.25em 0;
+  font-weight: 100;
+}
+div#tree div.tree {
+  white-space: nowrap;
+}
+div#tree div.tree > div {
+  display: inline-block;
+  position: relative;
+  width: 12.5em;
+  vertical-align: top;
+}
+div#tree div.tree > div div.line {
+  position: absolute;
+  left: 0;
+  width: 0.25em;
+  margin-top: 1.375em;
+  background-color: #aaa;
+  z-index: 1;
+}
+div#tree div.tree > div div.node {
+  position: relative;
+  height: 3em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  margin-bottom: 1em;
+  border-radius: 5px;
+}
+div#tree div.tree > div div.node > div {
+  color: #fff;
+  padding: 0.833em;
+  font-size: 1.125em;
+  line-height: 1em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+div#tree div.tree > div div.node > div span {
+  color: rgba(255, 255, 255, 0.375);
+  font-weight: 400;
+}
+div#tree div.tree > div div.node.child:before {
+  content: '';
+  position: absolute;
+  top: 1.375em;
+  right: -0.5em;
+  width: 0.5em;
+  height: 0.25em;
+  background-color: #aaa;
+}
+div#tree div.tree > div div.node.procedure:after, div#tree div.tree > div div.node.lambda:after {
+  content: '';
+  position: absolute;
+  top: 1.375em;
+  left: -0.5em;
+  width: 0.5em;
+  height: 0.25em;
+  background-color: #aaa;
+}
+div#tree div.tree > div div.node.procedure {
+  background-color: #3498db;
+}
+div#tree div.tree > div div.node.lambda {
+  background-color: #1abc9c;
+}
+div#tree div.tree > div div.node.identifier {
+  background-color: #e74c3c;
+}
+div#tree div.tree > div div.node.string-literal {
+  background-color: #9b59b6;
+}
+div#tree div.tree > div div.node.numeric-literal {
+  background-color: #34495e;
+}
+div#tree div.tree > div div.node.boolean-literal {
+  background-color: #2ecc71;
+}
+div#tree div.error pre {
+  color: #555;
+}
+div#tree div.error pre span {
+  color: #fff;
+  padding: 0.5em;
+  background-color: #e74c3c;
+}
+html {
+  color: #555;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 16px;
+  font-weight: 300;
+  height: 100%;
+}
+body {
+  height: 100%;
+  overflow-y: auto;
+  margin: 0;
+  background-color: #eee;
+}
+div#root {
+  height: 100%;
+}
+section#app {
+  min-height: 100%;
+}
+input {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
